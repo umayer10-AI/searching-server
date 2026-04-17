@@ -6,16 +6,28 @@ import FoodCart from './FoodCart';
 
 const ClientCart = () => {
 
-    const {c,setC} = useContext(Data)
+    const {category,searching,c,setC,all,setAll} = useContext(Data)
 
     useEffect(() => {
-        const a = async () => {
-            const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/foods`)
+        const a = async (category='',search='') => {
+            const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/foods?category=${category}&search=${search}`)
             const data = await res.json()
             setC(data.data)
+            console.log(data.data)
+            setAll(data.data)
         }
-        a()
-    },[])
+        a(category,searching)
+    },[category,searching])
+
+    // useEffect(() => {
+    //     const a = async () => {
+    //         const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/foods`)
+    //         const data = await res.json()
+    //         setC(data.data)
+    //         setAll(data.data)
+    //     }
+    //     a()
+    // },[])
 
     // console.log(c)
 
