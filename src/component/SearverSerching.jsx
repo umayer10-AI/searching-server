@@ -5,9 +5,10 @@ import React, { useContext } from 'react';
 
 const SearverSerching = () => {
 
-    const {all,setAll,i,setI} = useContext(Data)
+    const {i,setI} = useContext(Data)
 
     const searchParams = useSearchParams()
+    // console.log(searchParams)
     const router = useRouter()
     const path = usePathname()
 

@@ -5,7 +5,6 @@ import React, { useContext } from 'react';
 const Searching = () => {
 
     const {setS,setC,all,i,setI,setcategory,category} = useContext(Data)
-    // console.log(i)
 
     const a = () => {
         if(i !== ""){
@@ -18,14 +17,9 @@ const Searching = () => {
         setS(i)
     }
 
-    // const b = (show) => {
-    //     const f = all.filter(v => v.category === show)
-    //     setC(f)
-    // }
-
     const c = (e) => {
         const value = e.target.value
-        // console.log(value)
+
         if(value === "All"){
             setcategory("")
         }
@@ -47,12 +41,6 @@ const Searching = () => {
                 <option>Biriyani</option>
                 <option>Beverage</option>
                 <option>Rice</option>
-                {/* <option onClick={() => setC(all)}>All</option>
-                <option onClick={() => b("burger")}>Burger</option>
-                <option onClick={() => b("dish")}>Pizza</option>
-                <option onClick={() => b("biriyani")}>Biriyani</option>
-                <option onClick={() => b("beverage")}>Beverage</option>
-                <option onClick={() => b("rice")}>Rice</option> */}
             </select>
         </div>
     );

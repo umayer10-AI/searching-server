@@ -6,7 +6,7 @@ import FoodCart from './FoodCart';
 
 const ClientCart = () => {
 
-    const {category,searching,c,setC,all,setAll} = useContext(Data)
+    const {category,searching,c,setC,setAll} = useContext(Data)
 
     useEffect(() => {
         const a = async (category='',search='') => {

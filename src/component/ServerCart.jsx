@@ -10,7 +10,7 @@ const ServerCart = () => {
 
     const handleCategory = (category) => {
         const params = new URLSearchParams(searchParams)
-        console.log(params)
+        // console.log(params)
 
         if(category==="All"){
             params.delete("category")
