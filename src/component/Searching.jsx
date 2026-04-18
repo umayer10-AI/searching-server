@@ -18,13 +18,14 @@ const Searching = () => {
         setS(i)
     }
 
-    const b = (show) => {
-        const f = all.filter(v => v.category === show)
-        setC(f)
-    }
+    // const b = (show) => {
+    //     const f = all.filter(v => v.category === show)
+    //     setC(f)
+    // }
 
     const c = (e) => {
         const value = e.target.value
+        // console.log(value)
         if(value === "All"){
             setcategory("")
         }
