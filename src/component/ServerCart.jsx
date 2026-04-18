@@ -1,6 +1,13 @@
+"use client"
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
 
 const ServerCart = () => {
+
+    const searchParams = useSearchParams()
+    const router = useRouter()
+    const path = usePathname()
+
     return (
         <div className='flex justify-center'>
             <select className="select select-primary">
