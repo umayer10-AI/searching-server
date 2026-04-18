@@ -13,7 +13,7 @@ const SearverSerching = () => {
 
     const a = () => {
         const params = new URLSearchParams(searchParams)
-        console.log(params)
+        // console.log(params)
         if(i){
             params.set("search",i)
         }
